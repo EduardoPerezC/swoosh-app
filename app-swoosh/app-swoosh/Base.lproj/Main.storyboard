@@ -110,6 +110,9 @@
                                         <state key="normal" title="MEN">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onMenTapped:" destination="riB-k0-xC3" eventType="touchUpInside" id="9Ws-TL-Zw7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3L-Wp-QnP" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="60" width="375" height="40"/>
@@ -118,6 +121,9 @@
                                         <state key="normal" title="WOMEN">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onWomenTapped:" destination="riB-k0-xC3" eventType="touchUpInside" id="veH-Ym-6vl"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aP5-pI-y8n" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="120" width="375" height="40"/>
@@ -126,6 +132,9 @@
                                         <state key="normal" title="CO - AD">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCoAdTapped:" destination="riB-k0-xC3" eventType="touchUpInside" id="dJF-Lv-Yqz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -146,7 +155,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P50-AZ-KJV" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P50-AZ-KJV" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="607" width="375" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.23266945419999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
@@ -189,6 +198,7 @@
                         <viewLayoutGuide key="safeArea" id="e8B-qn-GYK"/>
                     </view>
                     <connections>
+                        <outlet property="nextButton" destination="P50-AZ-KJV" id="jyp-MA-iGO"/>
                         <segue destination="WvQ-oS-gCU" kind="show" identifier="skillSegue" id="Yon-u6-mjg"/>
                     </connections>
                 </viewController>
@@ -273,6 +283,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SNb-Ic-e5R"/>
                     </view>
+                    <connections>
+                        <outlet property="desiredLeaguelbl" destination="oVZ-uC-zIK" id="W6h-dd-NYE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vod-MJ-dv8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,9 +10,14 @@ import UIKit
 
 class SkillLevelVC: UIViewController {
 
+    @IBOutlet weak var desiredLeaguelbl: UILabel!
+    var player : Player!
+    
     override func viewDidLoad() {
+        print("on viewdidload")
         super.viewDidLoad()
-
+        desiredLeaguelbl.text = player.desiredLeague!
+        print(player.desiredLeague!)
         // Do any additional setup after loading the view.
     }
     

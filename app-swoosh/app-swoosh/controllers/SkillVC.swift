@@ -10,25 +10,56 @@ import UIKit
 
 class SkillVC: UIViewController {
 
+    @IBOutlet weak var nextButton: BorderButton!
+    
+    var player : Player!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        player = Player()
         // Do any additional setup after loading the view.
     }
     
     @IBAction func onNextTapped(_ sender: Any) {
         
+        
         performSegue(withIdentifier: "skillSegue", sender : self)
+        print("calling segue")
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+   
+    @IBAction func onMenTapped(_ sender: Any) {
+        
+        selectDesiredLeague(league: "Men")
+        
     }
-    */
-
+    
+    
+    @IBAction func onWomenTapped(_ sender: Any) {
+        
+        selectDesiredLeague(league: "Women")
+        
+    }
+    
+    @IBAction func onCoAdTapped(_ sender: Any) {
+        
+        selectDesiredLeague(league: "Co Ad")
+    }
+    
+    func selectDesiredLeague(league : String){
+        
+        player.desiredLeague = league
+        nextButton.isEnabled = true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("preparing segue")
+        if let skillLevelVC = segue.destination as? SkillLevelVC {
+            
+            skillLevelVC.player = player
+            
+        }
+        
+    }
 }
